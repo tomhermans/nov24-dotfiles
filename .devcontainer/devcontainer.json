@@ -1,0 +1,29 @@
+{
+	"name": "GitHub Codespaces",
+	//CUSTOM CONTAINER SECTION
+	//image: "repo/image:tag",
+	//"dockerFile": "customImage.dockerfile",
+   	//"workspaceMount": "source=${localWorkspaceFolder},target=/home/codespace/workspace,type=bind,consistency=cached",
+   	//"workspaceFolder": "/home/codespace/workspace",
+   	//"runArgs": [ "--cap-add=SYS_PTRACE", "--security-opt", "seccomp=unconfined" ],
+
+	// Uncomment to connect as a non-root user. See https://aka.ms/vscode-remote/containers/non-root.
+	//"remoteUser": "ghcode",
+	
+	// Open port 3000 by default
+	"appPort": [3000],
+	//"forwardPorts": [8080, 8081],
+
+	// Set container specific settings.json values on container create.
+	"settings": { 
+		"terminal.integrated.shell.linux": "/bin/bash",
+	},
+
+	// Add the IDs of extensions you want to be installed when the container is created.
+	"extensions": [
+		"ms-python.python"
+	],
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	//"postCreateCommand": "/bin/bash ./.devcontainer/post-create.sh > ~/post-create.log",
+}
