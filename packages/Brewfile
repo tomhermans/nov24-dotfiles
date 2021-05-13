@@ -1,0 +1,13 @@
+brew 'mas'
+brew 'coreutils'
+
+cask 'discord'
+#cask 'docker'
+cask 'firefox'
+cask 'slack'
+cask 'teamviewer'
+cask 'visual-studio-code'
+cask 'zoom'
+
+mas 'OneDrive', id: 823766827
+#mas 'Xcode', id: 497799835
