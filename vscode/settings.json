@@ -1,0 +1,57 @@
+{
+   "telemetry.enableTelemetry": false,
+   "telemetry.enableCrashReporter": false,
+   "githubPullRequests.telemetry.enabled": false,
+
+   "workbench.startupEditor": "welcomePageInEmptyWorkbench",
+   "workbench.colorTheme": "GitHub Dark",
+   "workbench.editorAssociations": [
+      {
+         "viewType": "jupyter.notebook.ipynb",
+         "filenamePattern": "*.ipynb"
+      }
+   ],
+
+   "dotfiles.repository": "https://github.com/nsanka/dotfiles.git",
+   "codespaces.accountProvider": "GitHub",
+
+   "terminal.integrated.inheritEnv": false,
+   "git.ignoreWindowsGit27Warning": true,
+   "git.autofetch": true,
+
+   // ##############################################################################
+   // MyMini VSCode
+   "python.pythonPath": "C:\\Users\\T7171MS\\.conda\\envs\\Python375\\python.exe",
+   "terminal.integrated.shell.osx": "/bin/bash",
+   "remote.SSH.remotePlatform": {
+      "vm_cs_eus": "linux",
+      "MyMini": "macOS"
+   },
+   // ##############################################################################
+   // FCA Laptop VSCode
+   // MobaXterm Bash
+   "terminal.integrated.shell.windows": "C:\\Users\\T7171MS\\Apps\\MobaXterm_v20.2\\slash\\bin\\bash.exe",
+   "terminal.integrated.shellArgs.windows": ["--login"],
+
+   // Define Environment Variables
+   "terminal.integrated.env.windows": {
+       "adas_dir": "C:\\Users\\T7171MS\\Projects\\ADAS"
+   },
+   
+   //"remote.SSH.path": "C:\\Users\\T7171MS\\Apps\\MobaXterm_v20.2\\slash\\bin\\_ssh.exe",
+   "remoteX11.SSH.verboseLogging": true,
+   "remoteX11.SSH.agent": "C:\\Users\\T7171MS\\Apps\\MobaXterm_v20.2\\slash\\bin\\_ssh.exe",
+   // ##############################################################################
+   
+   "editor.suggestSelection": "first",  
+   "editor.largeFileOptimizations": false,
+   "editor.tabSize": 3,
+
+   "python.languageServer": "Pylance",
+   "python.terminal.activateEnvironment": false,
+   "jupyter.textOutputLimit": 0,
+   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
+   
+   // Open the terminal in the currently opened file's directory
+   //"terminal.integrated.cwd": "${fileDirname}",
+}
