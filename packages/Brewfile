@@ -1,13 +1,16 @@
-brew 'mas'
-brew 'coreutils'
-
 cask 'discord'
 #cask 'docker'
 cask 'firefox'
+cask 'iterm2'
+cask 'miniconda'
 cask 'slack'
 cask 'teamviewer'
 cask 'visual-studio-code'
 cask 'zoom'
+
+brew 'mas'
+brew 'coreutils'
+brew 'wget'
 
 mas 'OneDrive', id: 823766827
 #mas 'Xcode', id: 497799835
