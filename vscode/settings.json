@@ -22,7 +22,7 @@
    // ##############################################################################
    // MyMini VSCode
    "python.pythonPath": "C:\\Users\\T7171MS\\.conda\\envs\\Python375\\python.exe",
-   "terminal.integrated.shell.osx": "/bin/bash",
+   "terminal.integrated.shell.osx": "/bin/zsh",
    "remote.SSH.remotePlatform": {
       "vm_cs_eus": "linux",
       "MyMini": "macOS"
