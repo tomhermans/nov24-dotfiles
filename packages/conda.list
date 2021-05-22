@@ -2,15 +2,18 @@
 update -y -n base -c defaults conda
 # Set Priority
 config --set channel_priority flexible
+# Create New Environment Using "yml" File
+env create -f conda_env.yml
+
 # Create New Environment
-create -y --name py37 python=3.7
+#create -y --name py37 python=3.7
 # Install Conda Packages
-install -y -n py37 pandas plotly matplotlib seaborn scikit-learn
+#install -y -n py37 pandas plotly matplotlib seaborn scikit-learn
 # Install Plotting Packages using conda-forge
-install -y -n py37 -c conda-forge altair vega folium
+#install -y -n py37 -c conda-forge altair vega folium
 # Install TensorFlow Packages using conda-forge
-install -y -n py37 -c conda-forge opencv tensorflow keras
+#install -y -n py37 -c conda-forge opencv tensorflow keras
 # Install Watermark Packages using conda-forge
-install -y -n py37 -c conda-forge gpxpy watermark
+#install -y -n py37 -c conda-forge gpxpy watermark
 # Install PyTorch using pytorch
-install -y -n py37 -c pytorch torchvision
+#install -y -n py37 -c pytorch torchvision
