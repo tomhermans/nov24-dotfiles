@@ -228,4 +228,10 @@ dependencies:
   - zipp=3.4.1=pyhd8ed1ab_0
   - zlib=1.2.11=h7795811_1010
   - zstd=1.5.0=h582d3a0_0
+  - pip:
+    - greenlet==1.1.0
+    - mock==4.0.3
+    - psycopg2-binary==2.8.6
+    - sqlalchemy==1.4.15
+    - wrds==3.0.10
 prefix: /opt/homebrew/Caskroom/miniconda/base/envs/py37
