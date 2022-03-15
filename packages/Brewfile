@@ -11,6 +11,7 @@ cask 'zoom'
 brew 'mas'
 brew 'coreutils'
 brew 'wget'
+brew 'azure-cli'
 
 mas 'OneDrive', id: 823766827
 #mas 'Xcode', id: 497799835
