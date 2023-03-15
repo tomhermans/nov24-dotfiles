@@ -1,6 +1,7 @@
 #cask 'discord'
 cask 'docker'
-cask 'firefox'
+#cask 'firefox'
+cask 'microsoft-edge'
 cask 'iterm2'
 #cask 'jetbrains-toolbox'
 cask 'miniconda'
@@ -17,4 +18,4 @@ brew 'azure-cli'
 brew 'awscli'
 
 #mas 'OneDrive', id: 823766827
-#mas 'Xcode', id: 497799835
+mas 'Xcode', id: 497799835

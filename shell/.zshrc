@@ -125,3 +125,5 @@ unset __conda_setup
 alias stopub='az vm stop --resource-group rg-ubuntu20 --name ubuntu --subscription 07bbf357-87ea-4f36-8c89-4a31f5cc0fd0'
 alias startub='az vm start --resource-group rg-ubuntu20 --name ubuntu --subscription 07bbf357-87ea-4f36-8c89-4a31f5cc0fd0'
 alias showub='az vm show --resource-group rg-ubuntu20 --name ubuntu --subscription 07bbf357-87ea-4f36-8c89-4a31f5cc0fd0'
+
+export DOCKER_DEFAULT_PLATFORM=linux/amd64
