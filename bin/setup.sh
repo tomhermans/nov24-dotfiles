@@ -11,7 +11,12 @@ DESTINATION="$(realpath -q ~/bin)"
 info "Setting up user bin..."
 
 substep_info "Creating user bin folder..."
-mkdir -p "$DESTINATION"
+if [ -z "$DESTINATION" ]; then
+    mkdir ~/bin
+    DESTINATION="$(realpath -q ~/bin)"
+else
+    mkdir -p "$DESTINATION"
+fi
 
 find * -not -name "$(basename ${0})" -type f | while read fn; do
     symlink "$SOURCE/$fn" "$DESTINATION/$fn"
