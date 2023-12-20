@@ -1,0 +1,24 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+   {
+      "key": "shift+cmd+.",
+      "command": "-breadcrumbs.focusAndSelect",
+      "when": "breadcrumbsPossible && breadcrumbsVisible"
+   },
+   {
+      "key": "shift+cmd+.",
+      "command": "breadcrumbs.toggle"
+   },
+   {
+      "key": "shift+cmd+a",
+      "command": "workbench.action.toggleActivityBarVisibility"
+   },
+   {
+      "key": "alt+c alt+f",
+      "command": "workbench.files.action.collapseExplorerFolders"
+   },
+   {
+      "key": "ctrl+shift+k",
+      "command": "workbench.action.terminal.kill"
+   }
+]

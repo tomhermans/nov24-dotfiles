@@ -1,38 +1,30 @@
 {
    "telemetry.telemetryLevel": "off",
-   "telemetry.enableCrashReporter": false,
-   "githubPullRequests.telemetry.enabled": false,
-
-   "workbench.startupEditor": "welcomePageInEmptyWorkbench",
-   "workbench.colorTheme": "GitHub Dark",
+   "aws.telemetry": false,
+   "workbench.colorTheme": "GitHub Dark Default",
+   "workbench.startupEditor": "none",
+   "workbench.iconTheme": "material-icon-theme",
+   "workbench.sideBar.location": "right",
+   "workbench.editor.tabActionCloseVisibility": false,
    "workbench.editorAssociations": {
       "*.ipynb": "jupyter.notebook.ipynb"
    },
-
-   //"dotfiles.repository": "https://github.com/nsanka/dotfiles.git",
-   "codespaces.accountProvider": "GitHub",
-
-   "terminal.integrated.inheritEnv": false,
-   "git.ignoreWindowsGit27Warning": true,
-   "git.autofetch": true,
-   
-   "editor.suggestSelection": "first",  
-   "editor.largeFileOptimizations": false,
    "editor.tabSize": 3,
-
+   "editor.minimap.enabled": false,
+   "editor.cursorBlinking": "expand",
+   "editor.cursorWidth": 4,
+   "editor.hover.delay": 1000,
+   "editor.formatOnSave": true,
+   "editor.wordWrap": "on",
+   "editor.fontSize": 14,
+   "debug.console.fontSize": 14,
+   "scm.inputFontSize": 14,
+   "terminal.integrated.fontSize": 14,
+   "chat.editor.fontSize": 14,
+   "explorer.autoReveal": false,
+   "files.trimFinalNewlines": true,
+   "files.trimTrailingWhitespace": true,
+   "breadcrumbs.enabled": false,
    "python.languageServer": "Pylance",
-   "python.terminal.activateEnvironment": false,
-   "jupyter.textOutputLimit": 0,
-   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
-   
-   "atlascode.jira.enabled": true,
-   "python.linting.enabled": false,
-   "redhat.telemetry.enabled": false,
-   "aws.telemetry": false,
-   "git.confirmSync": false,
-   
-   "terminal.integrated.defaultProfile.osx": "zsh",
-   
-   // Open the terminal in the currently opened file's directory
-   //"terminal.integrated.cwd": "${fileDirname}",
+   "python.terminal.activateEnvironment": true
 }
