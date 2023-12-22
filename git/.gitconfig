@@ -118,3 +118,5 @@
 [user]
 	name = Naga Sanka
 	email = nsanka@me.com
+[pull]
+	rebase = true

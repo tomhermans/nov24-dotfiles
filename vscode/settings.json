@@ -24,7 +24,11 @@
    "explorer.autoReveal": false,
    "files.trimFinalNewlines": true,
    "files.trimTrailingWhitespace": true,
-   "breadcrumbs.enabled": false,
    "python.languageServer": "Pylance",
-   "python.terminal.activateEnvironment": true
+   "python.terminal.activateEnvironment": true,
+   "breadcrumbs.enabled": false,
+   "databricks.experiments.optInto": [
+      "notebooks.dbconnect"
+   ],
+   "git.autofetch": true
 }
