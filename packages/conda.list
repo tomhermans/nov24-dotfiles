@@ -2,18 +2,24 @@
 update -y -n base -c defaults conda
 # Set Priority
 config --set channel_priority flexible
+# Append conda-forge channel
+config --append channels conda-forge
 # Create New Environment Using "yml" File
 env create -f conda_env.yml
 
 # Create New Environment
-#create -y --name py37 python=3.7
+#create -y --name py3p10 python=3.10
 # Install Conda Packages
-#install -y -n py37 pandas plotly matplotlib seaborn scikit-learn
+#install -y -n py3p10 pylint jupyter timezonefinder "pycaret>3.0" "pandas-profiling>3.4" databricks-cli
+# Configure databricks-cli
+#databricks configure --host https://databricks-id.cloud.databricks.com --profile Default --token
 # Install Plotting Packages using conda-forge
-#install -y -n py37 -c conda-forge altair vega folium
+#install -y -n py3p10 -c conda-forge altair vega folium
 # Install TensorFlow Packages using conda-forge
-#install -y -n py37 -c conda-forge opencv tensorflow keras
+#install -y -n py3p10 -c conda-forge opencv tensorflow keras
 # Install Watermark Packages using conda-forge
-#install -y -n py37 -c conda-forge gpxpy watermark
+#install -y -n py3p10 -c conda-forge gpxpy watermark
 # Install PyTorch using pytorch
-#install -y -n py37 -c pytorch torchvision
+#install -y -n py3p10 -c pytorch torchvision
+# Install Databricks-Connect using pip
+#python -m pip install --upgrade "databricks-connect==13.3.2"  # Or X.Y.* to match your cluster version.
