@@ -127,3 +127,27 @@ alias startub='az vm start --resource-group rg-ubuntu20 --name ubuntu --subscrip
 alias showub='az vm show --resource-group rg-ubuntu20 --name ubuntu --subscription 07bbf357-87ea-4f36-8c89-4a31f5cc0fd0'
 
 export DOCKER_DEFAULT_PLATFORM=linux/amd64
+
+setenv(){
+    set -a
+    [ -f ".env" ] && source ".env"
+    set +a
+}
+
+# MAVEN env variables
+export M2_HOME="/opt/homebrew/Cellar/maven/3.9.6"
+export PATH=$PATH:$M2_HOME/bin
+
+# JAVA env variables
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/jre
+export PATH=$PATH:$JAVA_HOME/bin
+
+## HADOOP env variables
+export HADOOP_HOME="/opt/homebrew/Cellar/hadoop/3.3.6/libexec"
+export PATH=$PATH:$HADOOP_HOME/bin
+export PATH=$PATH:$HADOOP_HOME/sbin
+export HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop
+export HADOOP_MAPRED_HOME=$HADOOP_HOME
+export HADOOP_COMMON_HOME=$HADOOP_HOME
+export HADOOP_HDFS_HOME=$HADOOP_HOME
+export YARN_HOME=$HADOOP_HOME

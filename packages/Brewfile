@@ -16,6 +16,11 @@ brew 'coreutils'
 brew 'wget'
 #brew 'azure-cli'
 brew 'awscli'
+brew 'hashicorp/tap/terraform'
+brew 'maven'
+brew 'hadoop'
+brew 'scala'
+brew 'postgresql'
 
 #mas 'OneDrive', id: 823766827
 #mas 'Xcode', id: 497799835
