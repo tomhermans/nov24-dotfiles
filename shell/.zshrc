@@ -1,10 +1,12 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# Add Homebrew to PATH
-eval "$(/opt/homebrew/bin/brew shellenv)"
-# Add Visual Studio Code (code)
-export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+if uname | grep -q 'Darwin' ; then
+    # Add Homebrew to PATH
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+    # Add Visual Studio Code (code)
+    export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+fi
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
