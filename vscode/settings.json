@@ -30,5 +30,6 @@
    "databricks.experiments.optInto": [
       "notebooks.dbconnect"
    ],
-   "git.autofetch": true
+   "git.autofetch": true,
+   "terminal.integrated.defaultProfile.linux": "zsh"
 }

@@ -8,6 +8,10 @@ if uname | grep -q 'Darwin' ; then
     export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 fi
 
+if uname | grep -q 'Linux' ; then
+    eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+fi
+
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -108,44 +112,81 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/opt/homebrew/Caskroom/miniconda/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh" ]; then
-        . "/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh"
-    else
-        export PATH="/opt/homebrew/Caskroom/miniconda/base/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
-# Azure CLI
-alias stopub='az vm stop --resource-group rg-ubuntu20 --name ubuntu --subscription 07bbf357-87ea-4f36-8c89-4a31f5cc0fd0'
-alias startub='az vm start --resource-group rg-ubuntu20 --name ubuntu --subscription 07bbf357-87ea-4f36-8c89-4a31f5cc0fd0'
-alias showub='az vm show --resource-group rg-ubuntu20 --name ubuntu --subscription 07bbf357-87ea-4f36-8c89-4a31f5cc0fd0'
-
-export DOCKER_DEFAULT_PLATFORM=linux/amd64
-
 setenv(){
     set -a
     [ -f ".env" ] && source ".env"
     set +a
 }
 
-# MAVEN env variables
-export M2_HOME="/opt/homebrew/Cellar/maven/3.9.6"
-export PATH=$PATH:$M2_HOME/bin
+# Azure CLI
+alias stopub='az vm stop --resource-group rg-ubuntu20 --name ubuntu --subscription 07bbf357-87ea-4f36-8c89-4a31f5cc0fd0'
+alias startub='az vm start --resource-group rg-ubuntu20 --name ubuntu --subscription 07bbf357-87ea-4f36-8c89-4a31f5cc0fd0'
+alias showub='az vm show --resource-group rg-ubuntu20 --name ubuntu --subscription 07bbf357-87ea-4f36-8c89-4a31f5cc0fd0'
 
-# JAVA env variables
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/jre
-export PATH=$PATH:$JAVA_HOME/bin
+if uname | grep -q 'Darwin' ; then
+    # >>> conda initialize >>>
+    # !! Contents within this block are managed by 'conda init' !!
+    __conda_setup="$('/opt/homebrew/Caskroom/miniconda/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+    if [ $? -eq 0 ]; then
+        eval "$__conda_setup"
+    else
+        if [ -f "/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh" ]; then
+            . "/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh"
+        else
+            export PATH="/opt/homebrew/Caskroom/miniconda/base/bin:$PATH"
+        fi
+    fi
+    unset __conda_setup
+    # <<< conda initialize <<<
 
-## HADOOP env variables
-export HADOOP_HOME="/opt/homebrew/Cellar/hadoop/3.3.6/libexec"
+    # DOCKER Platform
+    export DOCKER_DEFAULT_PLATFORM=linux/amd64
+
+    # MAVEN env variables
+    export M2_HOME="/opt/homebrew/Cellar/maven/3.9.6"
+    export PATH=$PATH:$M2_HOME/bin
+
+    # JAVA env variables
+    export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/jre
+    export PATH=$PATH:$JAVA_HOME/bin
+
+    ## HADOOP env variables
+    export HADOOP_HOME="/opt/homebrew/Cellar/hadoop/3.3.6/libexec"
+fi
+
+if uname | grep -q 'Linux' ; then
+    # >>> conda initialize >>>
+    # !! Contents within this block are managed by 'conda init' !!
+    __conda_setup="$('/home/t7171ms/Apps/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+    if [ $? -eq 0 ]; then
+        eval "$__conda_setup"
+    else
+        if [ -f "/home/t7171ms/Apps/miniconda3/etc/profile.d/conda.sh" ]; then
+            . "/home/t7171ms/Apps/miniconda3/etc/profile.d/conda.sh"
+        else
+            export PATH="/home/t7171ms/Apps/miniconda3/bin:$PATH"
+        fi
+    fi
+    unset __conda_setup
+    # <<< conda initialize <<<
+
+    cmvpn() {
+        nmcli connection $1 cm-vpn
+    }
+
+    # MAVEN env variables
+    export M2_HOME="/home/linuxbrew/.linuxbrew/Cellar/maven/3.9.6"
+    export PATH=$PATH:$M2_HOME/bin
+
+    # JAVA env variables
+    export JAVA_HOME="/home/linuxbrew/.linuxbrew/opt/openjdk@8/libexec/jre"
+    export PATH=$PATH:$JAVA_HOME/bin
+    export CPPFLAGS="-I/home/linuxbrew/.linuxbrew/opt/openjdk@8/include"
+
+    # HADOOP env variables
+    export HADOOP_HOME="/home/linuxbrew/.linuxbrew/Cellar/hadoop/3.3.6/libexec"
+fi
+
 export PATH=$PATH:$HADOOP_HOME/bin
 export PATH=$PATH:$HADOOP_HOME/sbin
 export HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop
