@@ -5,7 +5,7 @@ config --set channel_priority flexible
 # Append conda-forge channel
 config --append channels conda-forge
 # Create New Environment Using "yml" File
-env create -f conda_env.yml
+#env create -f conda_env.yml
 
 # Create New Environment
 #create -y --name py3p10 python=3.10

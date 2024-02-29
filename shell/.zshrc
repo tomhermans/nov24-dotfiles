@@ -143,15 +143,15 @@ if uname | grep -q 'Darwin' ; then
     export DOCKER_DEFAULT_PLATFORM=linux/amd64
 
     # MAVEN env variables
-    export M2_HOME="/opt/homebrew/Cellar/maven/3.9.6"
-    export PATH=$PATH:$M2_HOME/bin
+    #export M2_HOME="/opt/homebrew/Cellar/maven/3.9.6"
+    #export PATH=$PATH:$M2_HOME/bin
 
     # JAVA env variables
     export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/jre
     export PATH=$PATH:$JAVA_HOME/bin
 
     ## HADOOP env variables
-    export HADOOP_HOME="/opt/homebrew/Cellar/hadoop/3.3.6/libexec"
+    #export HADOOP_HOME="/opt/homebrew/Cellar/hadoop/3.3.6/libexec"
 fi
 
 if uname | grep -q 'Linux' ; then
@@ -187,10 +187,10 @@ if uname | grep -q 'Linux' ; then
     export HADOOP_HOME="/home/linuxbrew/.linuxbrew/Cellar/hadoop/3.3.6/libexec"
 fi
 
-export PATH=$PATH:$HADOOP_HOME/bin
-export PATH=$PATH:$HADOOP_HOME/sbin
-export HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop
-export HADOOP_MAPRED_HOME=$HADOOP_HOME
-export HADOOP_COMMON_HOME=$HADOOP_HOME
-export HADOOP_HDFS_HOME=$HADOOP_HOME
-export YARN_HOME=$HADOOP_HOME
+#export PATH=$PATH:$HADOOP_HOME/bin
+#export PATH=$PATH:$HADOOP_HOME/sbin
+#export HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop
+#export HADOOP_MAPRED_HOME=$HADOOP_HOME
+#export HADOOP_COMMON_HOME=$HADOOP_HOME
+#export HADOOP_HDFS_HOME=$HADOOP_HOME
+#export YARN_HOME=$HADOOP_HOME
