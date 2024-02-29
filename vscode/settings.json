@@ -31,5 +31,6 @@
       "notebooks.dbconnect"
    ],
    "git.autofetch": true,
-   "terminal.integrated.defaultProfile.linux": "zsh"
+   "terminal.integrated.defaultProfile.linux": "zsh",
+   "git.confirmSync": false
 }
