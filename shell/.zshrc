@@ -118,6 +118,11 @@ setenv(){
     set +a
 }
 
+export PATH=$PATH:$HOME/bin
+
+# MongoDB
+alias startmongod='mongod --dbpath=$HOME/data/db &'
+
 # Azure CLI
 alias stopub='az vm stop --resource-group rg-ubuntu20 --name ubuntu --subscription 07bbf357-87ea-4f36-8c89-4a31f5cc0fd0'
 alias startub='az vm start --resource-group rg-ubuntu20 --name ubuntu --subscription 07bbf357-87ea-4f36-8c89-4a31f5cc0fd0'
