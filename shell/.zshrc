@@ -152,8 +152,17 @@ if uname | grep -q 'Darwin' ; then
     #export PATH=$PATH:$M2_HOME/bin
 
     # JAVA env variables
-    export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/jre
-    export PATH=$PATH:$JAVA_HOME/bin
+    if hostname | grep -q 'MacPro16M1' ; then
+        export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/jre
+        export PATH=$PATH:$JAVA_HOME/bin
+    fi
+
+    # PYSPARK env variables
+    if hostname | grep -q 'MacProM3' ; then
+        export SPARK_HOME="/opt/homebrew/Caskroom/miniconda/base/envs/dev/lib/python3.10/site-packages/pyspark"
+        export PYSPARK_PYTHON="/opt/homebrew/Caskroom/miniconda/base/envs/dev/bin/python"
+        export PYSPARK_DRIVER_PYTHON="/opt/homebrew/Caskroom/miniconda/base/envs/dev/bin/python"
+    fi
 
     ## HADOOP env variables
     #export HADOOP_HOME="/opt/homebrew/Cellar/hadoop/3.3.6/libexec"

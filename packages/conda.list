@@ -23,3 +23,5 @@ config --append channels conda-forge
 #install -y -n py3p10 -c pytorch torchvision
 # Install Databricks-Connect using pip
 #python -m pip install --upgrade "databricks-connect==13.3.2"  # Or X.Y.* to match your cluster version.
+# Install PySpark
+#install openjdk findspark pyspark
