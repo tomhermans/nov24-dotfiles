@@ -32,5 +32,7 @@
    ],
    "git.autofetch": true,
    "terminal.integrated.defaultProfile.linux": "zsh",
-   "git.confirmSync": false
+   "git.confirmSync": false,
+   "github.copilot.editor.enableAutoCompletions": true,
+   "interactiveWindow.executeWithShiftEnter": true
 }
