@@ -82,7 +82,7 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git poetry zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -208,3 +208,8 @@ fi
 #export HADOOP_COMMON_HOME=$HADOOP_HOME
 #export HADOOP_HDFS_HOME=$HADOOP_HOME
 #export YARN_HOME=$HADOOP_HOME
+#export http_proxy=http://t7171ms:Chryls3r33@cloudproxy.tcom.chrysler.com:9090
+#export https_proxy=http://t7171ms:Chryls3r33@cloudproxy.tcom.chrysler.com:9090
+
+# Created by `pipx` on 2024-06-05 21:46:41
+export PATH="$PATH:/Users/T7171MS/.local/bin"
