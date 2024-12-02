@@ -171,14 +171,14 @@ fi
 if uname | grep -q 'Linux' ; then
     # >>> conda initialize >>>
     # !! Contents within this block are managed by 'conda init' !!
-    __conda_setup="$('/home/t7171ms/Apps/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+    __conda_setup="$('/home/nsanka/Apps/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
     if [ $? -eq 0 ]; then
         eval "$__conda_setup"
     else
-        if [ -f "/home/t7171ms/Apps/miniconda3/etc/profile.d/conda.sh" ]; then
-            . "/home/t7171ms/Apps/miniconda3/etc/profile.d/conda.sh"
+        if [ -f "/home/nsanka/Apps/miniconda3/etc/profile.d/conda.sh" ]; then
+            . "/home/nsanka/Apps/miniconda3/etc/profile.d/conda.sh"
         else
-            export PATH="/home/t7171ms/Apps/miniconda3/bin:$PATH"
+            export PATH="/home/nsanka/Apps/miniconda3/bin:$PATH"
         fi
     fi
     unset __conda_setup
