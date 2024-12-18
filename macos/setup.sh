@@ -22,10 +22,10 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 ###############################################################################
 
 # Set computer name (as done via System Preferences → Sharing)
-sudo scutil --set ComputerName "MacProM3"
-sudo scutil --set HostName "MacProM3"
-sudo scutil --set LocalHostName "MacProM3"
-sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "MacProM3"
+sudo scutil --set ComputerName "MBP-Pro-M1-nov2024"
+sudo scutil --set HostName "MBP-Pro-M1-nov2024"
+sudo scutil --set LocalHostName "MBP-Pro-M1-nov2024"
+sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "MBP-Pro-M1-nov2024"
 
 # Reveal IP address, hostname, OS version, etc. when clicking the clock
 # in the login window

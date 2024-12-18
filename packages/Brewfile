@@ -1,27 +1,48 @@
-cask 'discord'
-cask 'docker'
+# cask 'discord'
+# cask 'docker'
 #cask 'firefox'
-cask 'microsoft-edge'
+# cask 'microsoft-edge'
 cask 'iterm2'
 #cask 'jetbrains-toolbox'
 cask 'miniconda'
-cask 'slack'
-#cask 'sourcetree'
-cask 'teamviewer'
-cask 'visual-studio-code'
-cask 'zoom'
+# cask 'slack'
+cask 'sourcetree'
+# cask 'teamviewer'
+# cask 'visual-studio-code'
+# cask 'zoom'
 
-brew 'mas'
-brew 'coreutils'
-brew 'wget'
+# General utilities
+brew 'mas'                           # Mac App Store command-line interface
+brew 'coreutils'                     # GNU core utilities (useful for various shell commands)
+brew 'wget'                          # Downloading files from the web
+brew 'tree'                          # View directory structures in a tree-like format (great for navigating projects)
+
+
+brew 'node'                          # Node.js runtime (for running JavaScript on the server-side, tools like npm, etc.)
+brew 'yarn'                          # Alternative to npm, often preferred in frontend dev workflows
+brew 'git'                           # Version control tool (Git is essential for any developer)
+brew 'npm'                           # Node Package Manager (for managing frontend dependencies)
+brew 'httpie'                        # Command-line HTTP client (for testing APIs, more user-friendly than curl)
+brew 'jq'                            # Command-line JSON processor (useful for working with APIs and JSON data)
+
+# Optional but useful
+brew 'watch'                          # Run a command repeatedly at fixed intervals (useful for watching files in dev)
+brew 'tldr'                           # Simplified man pages (helps find command examples quickly)
+brew 'zsh-autosuggestions'            # Zsh plugin that suggests commands as you type
+brew 'zsh-syntax-highlighting'        # Zsh plugin for syntax highlighting in your terminal
+
+
 #brew 'azure-cli'
-brew 'awscli'
-brew 'hashicorp/tap/terraform'
+# brew 'awscli'
+# brew 'hashicorp/tap/terraform'
 #brew 'maven'
 #brew 'liquibase'
 #brew 'hadoop'
 #brew 'scala'
 #brew 'postgresql'
 
-mas 'OneDrive', id: 823766827
+# mas 'OneDrive', id: 823766827
 #mas 'Xcode', id: 497799835
+
+cask "font-fira-code"
+cask "vlc"

@@ -116,7 +116,7 @@
    insteadOf = gl:
 
 [user]
-	name = Naga Sanka
-	email = nsanka@me.com
+	name = Tom Hermans
+	email = tomhermans@gmail.com
 [pull]
 	rebase = true
